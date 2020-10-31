@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Text } from "../../styled";
+import { Link, BrowserRouter as Router } from "react-router-dom";
 const NavbarMain = styled.div`
   display: flex;
   justify-content: center;
@@ -22,14 +23,15 @@ const Logo = styled.p`
   margin-right: 400px;
   margin-left: 20px;
 `;
+
 const Navbar = () => {
   return (
     <NavbarMain>
       <Logo>InEducation</Logo>
       <NavbarList>
-        <Text>Курсы</Text>
-        <Text>Мои курсы</Text>
-        <Text>Выйти</Text>
+        <Link to="/Courses">Курсы</Link>
+        <Link to="/MyCourses">Мои курсы</Link>
+        <Link to="/LogOut">Войти</Link>
       </NavbarList>
     </NavbarMain>
   );

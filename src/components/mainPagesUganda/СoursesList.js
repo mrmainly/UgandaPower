@@ -31,17 +31,17 @@ const CoursesBlock = styled.div`
   margin-top: 50px;
 `;
 const CoursesList = () => {
-  return (
-    <MainDiv>
-      <CoursesDiv>
-        <CoursesBlock>ewf</CoursesBlock>
-        <CoursesBlock>ewf</CoursesBlock>
-        <CoursesBlock>ewf</CoursesBlock>
-        <CoursesBlock>ewf</CoursesBlock>
-        <CoursesBlock>ewf</CoursesBlock>
-        <CoursesBlock>ewf</CoursesBlock>
-      </CoursesDiv>
-    </MainDiv>
+  return (  
+      <MainDiv>
+        <CoursesDiv>
+          <CoursesBlock>ewf</CoursesBlock>
+          <CoursesBlock>ewf</CoursesBlock>
+          <CoursesBlock>ewf</CoursesBlock>
+          <CoursesBlock>ewf</CoursesBlock>
+          <CoursesBlock>ewf</CoursesBlock>
+          <CoursesBlock>ewf</CoursesBlock>
+        </CoursesDiv>
+      </MainDiv>
   );
 };
 
