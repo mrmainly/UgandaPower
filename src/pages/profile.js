@@ -98,7 +98,7 @@ const Profile = () => {
       <Container>
         <MainDiv>
           <Text>{login}</Text>
-          <Text>wefwefwef</Text>
+          <Button>Изменить</Button>
         </MainDiv>
         <Div>
           <Img src={Logo} />
@@ -117,8 +117,6 @@ const Profile = () => {
           <Text>instogram</Text>
         </MainDiv>
         <DivList>
-          <InstBlock>wefwe</InstBlock>
-          <InstBlock>wefwe</InstBlock>
           <InstBlock>wefwe</InstBlock>
         </DivList>
       </Container>

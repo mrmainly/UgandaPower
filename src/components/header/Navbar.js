@@ -17,6 +17,9 @@ const NavbarList = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-right: 20px;
+  @media (max-width: 800px) {
+    
+  }
 `;
 const Logo = styled.p`
   font-size: 16px;
