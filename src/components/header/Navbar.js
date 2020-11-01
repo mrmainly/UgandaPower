@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Text } from "../../styled";
 import { Link, BrowserRouter as Router } from "react-router-dom";
+import Cookie from "js-cookie";
+import axios from "axios";
 const NavbarMain = styled.div`
   display: flex;
   justify-content: center;
@@ -25,13 +27,61 @@ const Logo = styled.p`
 `;
 
 const Navbar = () => {
+  const [name, setName] = useState();
+  useEffect(() => {
+    let token = Cookie.get("jwttoken");
+    if (token) {
+      axios({
+        url: "https://1dfd378a8e4a.ngrok.io/graphql",
+        method: "POST",
+        headers: {
+          Authorization: token,
+        },
+        data: {
+          query: `
+        query{
+          user{
+            login
+          }
+        }
+          `,
+        },
+      }).then((res) => {
+        setName(res.data.data.user.login);
+      });
+    }
+  }, []);
   return (
     <NavbarMain>
       <Logo>InEducation</Logo>
       <NavbarList>
-        <Link to="/Courses">Курсы</Link>
-        <Link to="/MyCourses">Мои курсы</Link>
-        <Link to="/LogOut">Войти</Link>
+        <Link
+          to="/Courses"
+          style={{ color: "#000000", fontSize: 16, textDecoration: "none" }}
+        >
+          Курсы
+        </Link>
+        <Link
+          to="/MyCourses"
+          style={{ color: "#000000", fontSize: 16, textDecoration: "none" }}
+        >
+          Мои курсы
+        </Link>
+        {name ? (
+          <Link
+            to="/profile"
+            style={{ color: "#000000", fontSize: 16, textDecoration: "none" }}
+          >
+            {name}
+          </Link>
+        ) : (
+          <Link
+            to="/LogIn"
+            style={{ color: "#000000", fontSize: 16, textDecoration: "none" }}
+          >
+            Войти
+          </Link>
+        )}
       </NavbarList>
     </NavbarMain>
   );

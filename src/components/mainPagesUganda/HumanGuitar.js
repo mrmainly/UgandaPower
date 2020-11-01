@@ -15,7 +15,7 @@ const HumanGuitar = () => {
   const DivText = styled.div`
     display: flex;
     flex-direction: column;
-    margin-right: 200px;
+    margin-right: 100px;
   `;
   const TextLogin = styled.p`
     font-size: 48px;
