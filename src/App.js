@@ -3,6 +3,7 @@ import Courses from "./pages/courses";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import myCourses from "./pages/myCourses";
 import Login from "./pages/login";
+import Profile from "./pages/profile";
 function App() {
   return (
     <Router>
@@ -11,6 +12,7 @@ function App() {
         <Route path="/Courses" component={Courses} />
         <Route path="/MyCourses" component={myCourses} />
         <Route path="/LogIn" component={Login} />
+        <Route path="/profile" component={Profile} />
       </Switch>
     </Router>
   );
