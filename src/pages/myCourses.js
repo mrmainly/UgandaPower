@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/header/LayoutHeader";
 import styled from "styled-components";
-import CoursesBody from "../components/myCoursesFolder/CoursesBody";
+import CoursesBody from "../components/myCoursesFolder/LIstMyCours";
 
 const MainDiv = styled.div`
   display: flex;

@@ -1,7 +1,6 @@
 import MainPagesUganda from "./pages/mainPagesUganda";
 import Courses from "./pages/courses";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import MyCourses from "./pages/myCourses";
 import myCourses from "./pages/myCourses";
 function App() {
   return (
